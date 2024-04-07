@@ -1,6 +1,8 @@
 const express = require("express");
 const cors = require("cors");
 const authRouter = require("./app/routes/auth.route");
+const bookRouter = require("./app/routes/book.route");
+
 const ApiError = require("./app/api-error");
 
 const app = express();
@@ -8,6 +10,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/api/user", authRouter);
+app.use("/api/book", bookRouter);
 
 
 app.get('/', (req, res) => {
