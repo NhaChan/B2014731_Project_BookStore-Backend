@@ -24,7 +24,7 @@ class BorrowBooks {
 
     async create(payload) {
         const borrowBooks = this.extractBorrowBooksData(payload);
-        borrowBooks.status = "Mượn";
+        borrowBooks.status = "Đang chờ duyệt";
         const newOrder = await this.BorrowBooks.insertOne(
             borrowBooks
         );
