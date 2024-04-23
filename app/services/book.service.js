@@ -12,7 +12,8 @@ class BookService {
             genre: payload.genre,
             imageUrl: payload.imageUrl,
             description: payload.description,
-            quantity: payload.quantity
+            quantity: payload.quantity,
+            publisher: payload.publisher
         };
 
         Object.keys(book).forEach(
